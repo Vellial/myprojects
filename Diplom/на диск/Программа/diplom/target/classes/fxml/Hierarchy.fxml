@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="377.0" prefWidth="242.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.HierarchyController">
+   <children>
+      <Label layoutX="14.0" layoutY="6.0" text="Добавить иерархию к измерению">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnAdd" layoutX="52.0" layoutY="338.0" mnemonicParsing="false" onAction="#handleAdd" prefHeight="25.0" prefWidth="80.0" text="Добавить" />
+      <Button fx:id="btnSkip" layoutX="145.0" layoutY="338.0" mnemonicParsing="false" onAction="#handleSkip" text="Пропустить" />
+      <Label layoutX="14.0" layoutY="90.0" text="Название иерархии:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="hierName" layoutX="14.0" layoutY="109.0" prefHeight="25.0" prefWidth="211.0" />
+      <Label layoutX="14.0" layoutY="138.0" text="Уровни иерархии:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TreeView fx:id="hierColumns" layoutX="14.0" layoutY="157.0" prefHeight="165.0" prefWidth="211.0" />
+      <TextField fx:id="awName" layoutX="13.0" layoutY="59.0" prefHeight="25.0" prefWidth="211.0" />
+      <Label layoutX="13.0" layoutY="40.0" text="Имя аналитического пространства:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
