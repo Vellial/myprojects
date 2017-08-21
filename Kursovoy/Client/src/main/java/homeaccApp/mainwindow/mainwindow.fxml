@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane prefHeight="450.0" prefWidth="810.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="homeaccApp.mainwindow.MainWindowController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <MenuBar fx:id="mainMenu" prefHeight="29.0" prefWidth="714.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Файл">
+            <items>
+                  <MenuItem fx:id="miCategories" mnemonicParsing="false" text="Категории" />
+                  <MenuItem fx:id="miMeasures" mnemonicParsing="false" text="Единицы измерения" />
+                  <MenuItem fx:id="miCurrencies" mnemonicParsing="false" text="Валюты" />
+                  <MenuItem fx:id="miReports" mnemonicParsing="false" text="Отчёты" />
+                  <MenuItem fx:id="miSettingsItem" mnemonicParsing="false" text="Настройки" />
+                  <MenuItem fx:id="miSync" mnemonicParsing="false" text="Синхронизация" />
+                  <MenuItem fx:id="miBackup" mnemonicParsing="false" text="Резервное копирование" />
+              <MenuItem fx:id="miClose" mnemonicParsing="false" text="Закрыть" />
+                  <MenuItem fx:id="miExit" mnemonicParsing="false" text="Выйти" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Справка">
+            <items>
+              <MenuItem fx:id="miAbout" mnemonicParsing="false" text="О программе" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TabPane prefHeight="420.0" prefWidth="714.0" tabClosingPolicy="UNAVAILABLE" GridPane.rowIndex="1">
+        <tabs>
+          <Tab fx:id="billsTab" text="Счета">
+               <content>
+                  <fx:include fx:id="billstab" source="bills/Billstab.fxml" />
+               </content>
+          </Tab>
+          <Tab fx:id="costsTab" text="Расходы">
+               <content>
+                  <fx:include fx:id="coststab" source="costsincomes/costsTab.fxml" />
+               </content>
+          </Tab>
+          <Tab fx:id="incomesTab" text="Доходы">
+               <content>
+                  <fx:include fx:id="incomestab" source="costsincomes/incomesTab.fxml" />
+               </content>
+          </Tab>
+          <Tab fx:id="planningTab" text="Планирование">
+               <content>
+                  <fx:include source="planning/planningTab.fxml" />
+               </content>
+           </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</GridPane>

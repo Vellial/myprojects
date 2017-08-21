@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane prefHeight="330.0" prefWidth="806.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="homeaccApp.mainwindow.bills.BillstabController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="261.0" minHeight="10.0" prefHeight="239.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="61.0" minHeight="10.0" prefHeight="46.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="53.0" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <TableView fx:id="billsTable" prefHeight="265.0" prefWidth="806.0">
+         <columns>
+            <TableColumn fx:id="billName" prefWidth="104.0" text="Имя счёта" />
+            <TableColumn fx:id="billDate" prefWidth="136.0" text="Дата создания" />
+            <TableColumn fx:id="billStartBalance" minWidth="9.0" prefWidth="180.0" text="Начальный баланс" />
+            <TableColumn fx:id="billCashAmount" prefWidth="106.0" text="Остаток" />
+            <TableColumn fx:id="billCurrency" minWidth="0.0" prefWidth="73.0" text="Валюта" />
+            <TableColumn fx:id="billNote" prefWidth="207.0" text="Примечание" />
+         </columns>
+         <padding>
+            <Insets bottom="10.0" />
+         </padding>
+      </TableView>
+      <HBox prefHeight="41.0" prefWidth="274.0" spacing="10.0" GridPane.rowIndex="1">
+         <children>
+            <Button fx:id="billCreate" mnemonicParsing="false" onAction="#handleCreate" text="Создать">
+               <opaqueInsets>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </opaqueInsets>
+            </Button>
+            <Button fx:id="billUpdate" mnemonicParsing="false" onAction="#handleUpdate" text="Изменить" />
+            <Button fx:id="billDelete" mnemonicParsing="false" onAction="#handleDelete" text="Удалить" />
+         </children>
+         <opaqueInsets>
+            <Insets left="10.0" top="10.0" />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="12.0" left="12.0" top="12.0" />
+         </padding>
+      </HBox>
+      <Button mnemonicParsing="false" onAction="#handleRemittance" text="Перевод" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets bottom="12.0" left="12.0" top="5.0" />
+         </GridPane.margin>
+      </Button>
+   </children>
+</GridPane>

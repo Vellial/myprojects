@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="233.0" prefWidth="384.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="homeaccApp.categories.CategoriesController">
+   <children>
+      <TableView fx:id="categoriesView" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="252.0">
+        <columns>
+          <TableColumn fx:id="categoryName" prefWidth="134.0" text="Название" />
+          <TableColumn fx:id="categoryCostincome" prefWidth="117.0" text="Доход/Расход" />
+        </columns>
+      </TableView>
+      <Button fx:id="addCategory" layoutX="286.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleCreate" text="Добавить" />
+      <Button fx:id="deleteCategory" layoutX="286.0" layoutY="48.0" mnemonicParsing="false" onAction="#handleDelete" prefHeight="25.0" prefWidth="84.0" text="Удалить" />
+   </children>
+</AnchorPane>

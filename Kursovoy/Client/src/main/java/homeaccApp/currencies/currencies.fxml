@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="335.0" prefWidth="398.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="homeaccApp.currencies.CurrenciesController">
+   <children>
+      <TableView fx:id="currenciesTable" layoutX="14.0" layoutY="8.0" prefHeight="316.0" prefWidth="271.0">
+        <columns>
+          <TableColumn fx:id="currencyName" prefWidth="153.0" text="Название" />
+            <TableColumn fx:id="currencyShortName" prefWidth="117.0" text="Обозначение" />
+        </columns>
+      </TableView>
+      <VBox layoutX="296.0" layoutY="8.0" prefHeight="200.0" prefWidth="88.0" spacing="10.0">
+         <children>
+            <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#handleAdd" prefHeight="25.0" prefWidth="85.0" text="Добавить" />
+            <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#handleUpdate" text="Изменить" />
+            <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#handleDelete" prefHeight="25.0" prefWidth="85.0" text="Удалить" />
+            <Button fx:id="btnCancel" mnemonicParsing="false" onAction="#handleClose" prefHeight="25.0" prefWidth="86.0" text="Выход" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

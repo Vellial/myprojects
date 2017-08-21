@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="184.0" prefWidth="447.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="homeaccApp.mainwindow.bills.edit.BillsEditController">
+   <children>
+      <TextField fx:id="txtBillName" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="127.0" promptText="Имя счёта" />
+      <TextField fx:id="txtBillStartBalance" layoutX="155.0" layoutY="14.0" prefHeight="25.0" prefWidth="145.0" promptText="Начальный баланс" />
+      <ComboBox fx:id="cmbCurrency" layoutX="315.0" layoutY="14.0" prefHeight="25.0" prefWidth="115.0" promptText="Валюта" />
+      <TextArea fx:id="txtBillNote" layoutX="14.0" layoutY="55.0" prefHeight="67.0" prefWidth="416.0" promptText="Примечание" />
+      <Button fx:id="btnEdit" layoutX="14.0" layoutY="140.0" mnemonicParsing="false" onAction="#handleOk" prefHeight="25.0" prefWidth="71.0" text="Ок" />
+      <Button fx:id="btnCancel" layoutX="97.0" layoutY="140.0" mnemonicParsing="false" onAction="#handleCancel" text="Отмена" />
+   </children>
+</AnchorPane>

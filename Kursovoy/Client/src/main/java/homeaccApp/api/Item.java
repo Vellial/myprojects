@@ -1,0 +1,32 @@
+package homeaccApp.api;
+
+/**
+ * Items with name and id;
+ */
+public class Item {
+    private int id;
+    private String description;
+
+    public Item() {
+
+    }
+
+    public Item(int id, String description) {
+        this.id = id;
+        this.description = description;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    @Override
+    public String toString() {
+        return description;
+    }
+
+}

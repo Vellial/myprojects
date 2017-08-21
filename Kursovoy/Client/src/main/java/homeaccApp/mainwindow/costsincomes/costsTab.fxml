@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<GridPane prefHeight="325.0" prefWidth="806.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="homeaccApp.mainwindow.costsincomes.CostsController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="280.0" minHeight="10.0" prefHeight="272.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="158.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <TableView fx:id="costincTable" prefHeight="265.0" prefWidth="713.0">
+         <columns>
+            <TableColumn fx:id="costincDate" prefWidth="93.0" text="Дата" />
+            <TableColumn fx:id="costincBill" prefWidth="117.0" text="Счёт" />
+            <TableColumn fx:id="costincCount" prefWidth="64.0" text="Кол-во" />
+            <TableColumn fx:id="costincMeasure" prefWidth="73.0" text="Ед. изм." />
+            <TableColumn fx:id="costincCategory" prefWidth="152.0" text="Категория" />
+            <TableColumn fx:id="costincNote" prefWidth="199.0" text="Примечание" />
+            <TableColumn fx:id="costincAmount" prefWidth="105.0" text="Сумма" />
+         </columns>
+      </TableView>
+      <HBox prefHeight="33.0" prefWidth="274.0" spacing="10.0" GridPane.rowIndex="1">
+         <children>
+            <Button fx:id="btnCreate" mnemonicParsing="false" onAction="#handleCreate" text="Создать">
+               <opaqueInsets>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </opaqueInsets>
+            </Button>
+            <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#handleUpdate" text="Изменить" />
+            <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#handleDelete" text="Удалить" />
+         </children>
+         <padding>
+            <Insets bottom="12.0" left="12.0" top="12.0" />
+         </padding>
+      </HBox>
+   </children>
+</GridPane>

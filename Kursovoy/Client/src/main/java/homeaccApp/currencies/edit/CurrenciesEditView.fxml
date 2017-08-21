@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="166.0" prefWidth="232.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="homeaccApp.currencies.edit.CurrenciesEditController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="218.0" minWidth="10.0" prefWidth="218.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="198.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="216.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="216.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="216.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="339.0" minHeight="10.0" prefHeight="61.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label text="Название:">
+         <GridPane.margin>
+            <Insets left="12.0" top="12.0" />
+         </GridPane.margin>
+      </Label>
+      <Label text="Обозначение:" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets left="12.0" top="12.0" />
+         </GridPane.margin>
+      </Label>
+      <TextField fx:id="curName" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="12.0" />
+         </GridPane.margin>
+      </TextField>
+      <TextField fx:id="curVal" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets left="12.0" />
+         </GridPane.margin>
+      </TextField>
+      <HBox prefHeight="100.0" prefWidth="200.0" spacing="6.0" GridPane.rowIndex="4">
+         <children>
+            <Button fx:id="addCur" mnemonicParsing="false" onAction="#handleOk" prefHeight="25.0" prefWidth="90.0" text="Добавить" />
+            <Button fx:id="cancel" mnemonicParsing="false" onAction="#handleCancel" prefHeight="25.0" prefWidth="90.0" text="Отмена" />
+         </children>
+         <GridPane.margin>
+            <Insets left="12.0" top="12.0" />
+         </GridPane.margin>
+      </HBox>
+   </children>
+</GridPane>
